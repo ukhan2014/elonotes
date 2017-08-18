@@ -1,0 +1,12 @@
+Wiki for cloud setup on local machine:
+https://bitbucket.org/elosystemsteam/ic-vienna/wiki/Cloud%20local%20setup
+
+CouchDB:
+to ping: http://localhost:5984/
+utils: http://127.0.0.1:5984/_utils/
+
+IC dubai:
+http://localhost:4000/
+
+IC Vienna:
+http://localhost:8000/
