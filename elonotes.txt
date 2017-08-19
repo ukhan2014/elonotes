@@ -10,3 +10,42 @@ http://localhost:4000/
 
 IC Vienna:
 http://localhost:8000/
+
+
+
+Have to modify DeviceUtil.java, assets/local.properties so that local cloud setup sees the device, ip addresses and deviceid keys have to be changed.
+
+local.properties file for athens: (paste into android studio assets/local.properties file)
+******************************************************************************************
+server_port=4000
+host=10.42.16.54
+web_socket_protocol=ws
+web_server_protocol=http
+client_id=AV30AWaLBX7mEe9o1vU6
+contract_id=AV30Ab-VBX7mEe9o1vU-
+log_level=trace
+OTA_path=http\://10.42.16.54\:8001/systemUpdate/ota/ic-athens-ota.zip
+OTA_prop_path=http\://10.42.16.54\:8001/systemUpdate/ota/build.prop
+vienna_api_url=http\://10.42.16.54:8001/restapi
+******************************************************************************************
+
+
+temporary:
+int pkgVersionCode = 0;
+			String pkg = AppUtil.getPackageFromLocalUri(context, apkFile.getAbsolutePath());
+			try {
+				pkgVersionCode = context.getPackageManager().getPackageInfo(pkg, 0).versionCode;
+			} catch (NameNotFoundException e) {
+				if(e!=null){
+					Log.e(TAG, "getPackageVersion: "+ e.toString());
+					e.printStackTrace();
+				}
+			}catch (Exception e) {
+				if(e!=null){
+					e.printStackTrace();
+				}
+			}
+
+			Log.v(TAG,"First uninstalling... current one's version is " + pkgVersionCode);
+			AppUtil.silentUnInstall(pkg, context);
+			Log.v(TAG,"Line after uninstalling...");
