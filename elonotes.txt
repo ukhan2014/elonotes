@@ -10,10 +10,32 @@ http://localhost:4000/
 
 IC Vienna:
 http://localhost:8000/
+-modified ic-vienna/njs-app/config/config-default.json to contain:
+ 	"rootUser" : {
+    "userName" : "usman.khan@elotouch.com",
+    "password" : "usman123",
+    "defaultUser_comment" : "This is default user credentials"
+    },
 
 
 
-Have to modify DeviceUtil.java, assets/local.properties so that local cloud setup sees the device, ip addresses and deviceid keys have to be changed.
+Have to modify DeviceUtil.java, assets/local.properties so that local cloud setup sees the device, ip addresses and deviceid keys have to be changed. The stuff in local.properties should match the stuff entered in SystemProperty.java in athens under this function:
+private SystemProperty() {
+    deviceId = null;
+    logLevel = "trace";
+    serverPort =     443;
+    hostName = "localhost:4000";
+    webSocketProtocol = "wss";
+    clientUID = "AV30AWaLBX7mEe9o1vU6";
+    ContractUID = "AV30Ab-VBX7mEe9o1vU-";
+    ContractVersionId = "AV1QqY7hmWvn-GWd7BVi";
+    agentVersion = "1.0.0";
+    registrationRetryInterval = 15000;
+    connectionRetryInterval = 2000;
+    serverIP = "54, 186, 2, 228";
+    registrationLink = "https://" + hostName + "/api/deviceAPI/v0/register";
+    heartBeatInterval = 60 * 1000;
+}
 
 local.properties file for athens: (paste into android studio assets/local.properties file)
 ******************************************************************************************
@@ -49,3 +71,4 @@ int pkgVersionCode = 0;
 			Log.v(TAG,"First uninstalling... current one's version is " + pkgVersionCode);
 			AppUtil.silentUnInstall(pkg, context);
 			Log.v(TAG,"Line after uninstalling...");
+
