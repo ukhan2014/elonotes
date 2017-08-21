@@ -1,3 +1,10 @@
+Steps to start:
+1. Start up redis-server, elasticsearch, couchdb
+2. start up ic-constatinople by doing: $ node server.js
+3. start up ic-vienna by going to njs-app folder and doing: $ node server.js 
+4. Go to the dubai, vienna and couchdb in browser
+
+
 Wiki for cloud setup on local machine:
 https://bitbucket.org/elosystemsteam/ic-vienna/wiki/Cloud%20local%20setup
 
@@ -72,3 +79,14 @@ int pkgVersionCode = 0;
 			AppUtil.silentUnInstall(pkg, context);
 			Log.v(TAG,"Line after uninstalling...");
 
+
+
+******************************************************************************************
+
+To get the version number of package in Android using dumpsys:
+$ adb shell
+$ ps | grep -i "packageName"
+  ** this will give you a package name, for example com.android.chrome
+$ dumpsys package com.android.chrome | grep -i versionName
+
+******************************************************************************************
