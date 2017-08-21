@@ -90,3 +90,15 @@ $ ps | grep -i "packageName"
 $ dumpsys package com.android.chrome | grep -i versionName
 
 ******************************************************************************************
+
+EVR-1021
+
+The EVR-1021 branch lets you downgrade an app through eloview by first uninstalling the
+app and then installing the new lower version.
+
+The dev images of athens don't have storage permission, so you have to install the apk
+and then go into settings and grant the storage permission before you can try this feature
+out, otherwise athens will not be able to download the apk that you get eloView to
+download on to it.
+
+******************************************************************************************
