@@ -106,4 +106,11 @@ Because of this, you cannot drag the same apk through eloView twice unless you c
 the filename, the filename will already be detected by Athens on the device and it will
 block the download.
 
+Apps etc are downloaded in an elo hardware here:
+/sdcard/elo/downloaded_content
+
+** if already downloaded, it's ok to not download again, but it should at least uninstall
+and then reinstall again... by letting it be known that the download is complete and 
+letting elosecure do its thing.
+
 ******************************************************************************************
