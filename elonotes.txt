@@ -114,3 +114,42 @@ and then reinstall again... by letting it be known that the download is complete
 letting elosecure do its thing.
 
 ******************************************************************************************
+
+
+contract.json
+*************************
+1. cloud -- vienna, a frontend to constantinople
+2. constantinople -- backend to vienna. dcio middleware between cloud and device. data is stored here.
+3. athens and submodule dubai. dubai communicates with constantinople
+   ** app/src/main/java/com is athens code
+   ** app/src/main/java/io is dubai code it is generated code
+
+dubai:
+properties 	and 	actions
+********************************
+brigtness		trigger reboot
+volume			trigger data reset
+
+
+******************************************************************************************
+
+Teams:
+
+Thinking Hut:
+Naveen	lead
+Sachin  device
+sam     device
+Ganesh  cloud
+Sohaib  cloud
+
+Volansys:
+Pratik	BSP
+Neet    Cloud
+Hardik  device
+Anund   device
+
+Zimr:
+Utsal   android app dev
+Harsh	cloud
+
+******************************************************************************************
