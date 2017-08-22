@@ -101,4 +101,9 @@ and then go into settings and grant the storage permission before you can try th
 out, otherwise athens will not be able to download the apk that you get eloView to
 download on to it.
 
+Athens prevents an apk from being downloaded again because it keeps a copy of the file.
+Because of this, you cannot drag the same apk through eloView twice unless you change
+the filename, the filename will already be detected by Athens on the device and it will
+block the download.
+
 ******************************************************************************************
