@@ -153,3 +153,16 @@ Utsal   android app dev
 Harsh	cloud
 
 ******************************************************************************************
+
+Armor:
+
+VPN server is in keepass.
+
+Login and then you will see "Current company" dropdown. Staging is staging/ other one is prod.
+	Network tab -> "View servers" link on lower left hand will show all the server and
+				   what they are used for.
+	Network tab -> "View ip addresses" link on lower left hand will show all the servers and
+				   their ip addresses. This is useful for ssh access into them.
+
+******************************************************************************************
+
