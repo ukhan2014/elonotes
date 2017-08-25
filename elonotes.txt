@@ -166,3 +166,12 @@ Login and then you will see "Current company" dropdown. Staging is staging/ othe
 
 ******************************************************************************************
 
+Node js on production is running slow/using lots of memory.
+EVR856 Need to find tool to investigate:
+Memory usage - which objects are created, is there a loop it is stuck in?
+
+smartOS:
+
+
+
+
