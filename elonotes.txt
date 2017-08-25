@@ -173,5 +173,19 @@ Memory usage - which objects are created, is there a loop it is stuck in?
 smartOS:
 
 
+******************************************************************************************
 
+EVR1204 for pp ref and pp 2:
+
+After trying to figure out where timing is set for turning the display off after X seconds.
+Found out that there is some updateDisplayAlarms() logic that is complicated.
+Asked Pratik if he is familiar with DisplayController.java in athens. His response was that
+the complicated code in DisplayController is used to check set time is intent based on
+remaining time. He recommended that I either:
+1. create my own updateDisplayAlarms() by overloading the existing one
+2. use PULSE_INTENT in AppBroadcastReceiver, which is polling for time
+
+Ended up using the 2nd approach. Worked well.
+
+******************************************************************************************
 
