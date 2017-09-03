@@ -106,6 +106,14 @@ Because of this, you cannot drag the same apk through eloView twice unless you c
 the filename, the filename will already be detected by Athens on the device and it will
 block the download.
 
+Version code is checked, so that when app is upgraded, uninstall is not done and hence
+the app data is not deleted.
+
+There is still an issue, because the downloaded files are not removed from the download
+folder after installation, this can cause issues if the app that you are trying to 
+install is already downloaded. If there are any issues like that, we might need to add
+code that removes the apk files after install is complete.
+
 Apps etc are downloaded in an elo hardware here:
 /sdcard/elo/downloaded_content
 
@@ -188,4 +196,11 @@ remaining time. He recommended that I either:
 Ended up using the 2nd approach. Worked well.
 
 ******************************************************************************************
+
+Merging contract into device side code (athens)
+
+Wiki:
+    https://bitbucket.org/elosystemsteam/ic-vienna/wiki/Developer%20Steps%20for%20updating%20Contract%20in%20DCIO
+
+
 
