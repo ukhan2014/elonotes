@@ -204,3 +204,14 @@ Wiki:
 
 
 
+Deploying Nougat OTA builds on Dev server:
+1. Create a new release build job on Cloudbees Jenkins
+2. Once build is done, download both the ota zip package and the build.prop file and put them into a folder
+3. Log on to Armor online and go to the Services tab
+4. Open Cisco Anyconnect client and log into "ARMOR STAGING SSL VPN" from keepass
+5. Go to Armor online and get the IP address for the dev server
+6. ssh into the dev server using the "Staging ssh access" from keepass
+7. scp both the OTA zip and the build prop file to /home/ukhan on the dev server from your machine
+8. Copy both build.prop and OTA zip file under "/var/lib/vienna-sys/<paypoint refresh folder>/3.20.<build number>/" folder
+   You just need create folder for build version
+DONE.
